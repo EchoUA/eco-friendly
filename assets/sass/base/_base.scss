@@ -1,0 +1,76 @@
+/** ============================
+    basic_styles
+    ======================== **/
+a:focus, button:focus {
+	outline: none;
+    text-decoration: none !important;
+}
+
+h1, h2,  h3, h4, h5{
+    color: $color-h;
+} 
+
+strong {
+    font-weight: bold; 
+}
+a {
+    @include transition(0.35s, color);     
+    text-decoration: none; 
+    &:hover {
+        text-decoration: none;
+    }
+}
+.text{
+    h2{
+        font-family: $font-Oxygen;
+        font-size: 34px;      
+        font-weight: 300;
+        line-height: 1.48em;
+        color: #51753a;
+        @include respond-to(lg){
+            font-size: 42px;
+        }
+        @include respond-to(xl){
+            font-size: 52px;
+        }
+        @media screen and (max-height: 700px){
+            font-size: 34px;
+        }
+        
+    }
+    p{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        color: #2e3a26;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.66;
+        @include respond-to(sm){
+            font-size: 14px;
+        }        
+        @include respond-to(xxl){
+            font-size: 16px;
+            line-height: 2.25em;
+            padding-top: 0.8em;
+            padding-bottom: 0.8em;
+        }
+    }
+} 
+::-moz-selection {
+	color: #fff;
+    background: $color-selection;
+}
+
+::selection {
+    color: #fff;
+    background: $color-selection;
+}
+ 
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+}
+
+
+

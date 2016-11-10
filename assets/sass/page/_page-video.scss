@@ -1,0 +1,219 @@
+
+.section-videos {
+  padding: 78px 0;
+  overflow: hidden;
+}
+
+.video_tabs {
+  ul {
+    float: right;
+
+    li {
+      padding: 20px;
+      &.ui-state-active {
+        a:before {
+          opacity: 0;
+        }
+    
+      }
+
+      a {
+        -webkit-background-size:cover;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position: 0 0;
+        display: block;
+        width: 313px;
+        height: 178px;
+        position: relative;
+        z-index: 1;
+        padding: 20px 15px;
+
+        &:hover:before {
+          opacity: 0;
+        }
+
+        h4 {
+          font-size: 20px;
+          line-height: 24px;
+          color: #fff;
+          margin-bottom: 15px;
+        }
+        
+        p {
+          color: #fff;
+          font-size: 14px;
+          line-height: 22px;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          transition: 0.3s ease;
+          height: 100%;
+          z-index: -1;
+          background-color: rgba(0,0,0,.7);
+        }
+      }
+    }
+  }
+}
+
+section.details {
+  display: none;
+}
+// .content {
+//   pointer-events: normal;
+//   z-index: 0 !important;
+//   right: 0 !important;
+//   visibility: visible !important; 
+//   left: auto !important;
+
+//     pointer-events: auto !important;
+// }
+
+
+.video-js.vjs-fluid {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 !important;
+  right: 354px;
+  width: auto;
+  height: 800px !important;
+}
+
+.vjs-playlist-ad-overlay {
+  display: none !important;
+}
+
+.playlist-container {
+  float: right;
+  width: auto;
+  padding-top: 0 !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 800px;
+  width: 314px !important;
+    margin: 0 20px;
+
+  ol {
+    width: 314px;
+  }
+  
+  cite,time,p {
+    position: relative;
+    z-index: 20;
+  }
+
+  cite {
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    padding: 15px 32px 15px 15px; 
+    display: block;
+  }
+
+  picture {
+    &:before {
+      display: none;
+    }
+  }
+
+  p {
+    color: #fff;
+    padding: 0 32px 0 15px;  
+  }
+
+  time {
+    display: none;
+  }
+
+  li {
+    cursor: pointer;
+    position: relative;
+        width: 314px;
+
+      &+li {
+      margin-top: 20px;
+    }
+
+
+    &:before {
+      content: '';
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      transition: 0.3s ease;
+      opacity: 0.7;
+    }
+
+    &.vjs-selected,
+    &:hover {
+      &:before {
+        opacity: 0;
+      }
+    }
+
+    &+li  {
+      margin-top: 20px;
+    }
+  }
+
+
+
+  li {
+    width: 314px;
+    height: 178px;
+    display: block;
+    position: relative;
+
+    img {
+      z-index: -1;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%,0);
+    }
+  }
+}
+
+
+
+.video-js .vjs-big-play-button {
+  border: 1px solid #fff;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -72px;
+  margin-top: -72px;
+    transition: all 0.3s ease !important;
+
+  background: transparent url(../img/video/play-button.png) 58px 51px no-repeat !important;
+  &:before {
+    display: none !important;  }
+
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.preview-player-dimensions,
+.main-preview-player,
+.playlist-container {
+  width: auto;
+  height: 800px !important;
+}

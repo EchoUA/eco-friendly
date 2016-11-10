@@ -1,0 +1,295 @@
+figure figcaption b em {
+  display: block;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1640px) {
+
+.section-products .product a + a > .btn {
+    margin: 10px 0;
+}
+
+.section-buy {
+    height: 868px !important;
+}
+
+}
+
+@media screen and (max-width: 1240px) {
+  .footer-col {
+    width: 50% !important;
+    margin: 0 0 20px !important;
+    padding: 0 20px !important;
+  }
+   figure.height_400 {
+    height: 420px;
+   }
+
+   .section-products_big figure img {
+    width: 300px;
+   }
+
+   .section-products_big.full figure img {
+    width: auto;
+   }
+
+figure
+  {
+  height: 500px;
+ }
+
+  .toRight {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  figure figcaption b em {
+  display: block;
+  white-space: normal;
+}
+
+  .section-home_recipes h3,
+  .section-corporate h3,
+  .section-guidelines h3,
+  .section-home_recipes.heads-1 h3 {
+    font-size: 30px;
+    line-height: 42px;
+    padding: 20px 0;
+  }
+
+  .section-home_recipes {
+    padding-top: 100px;
+  }
+
+
+.product-slider .slick-arrow {
+ 
+    bottom: -150px;
+    top: auto;
+    z-index: 999;
+}
+
+
+figure span a .my_btn {
+  margin-bottom: 20px;
+}
+
+.product-slider  .slick-arrow.slick-prev {
+  left: 50%;
+  margin-left: -90px;
+}
+
+.product-slider  .slick-arrow.slick-next {
+  right: 50%;
+  margin-right: -90px;
+}
+
+}
+
+@media screen and (max-width: 1199px) {
+
+figure
+  {
+    margin-bottom: 90px;
+  height: 450px;
+ }
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .content {
+      height: auto;
+      position: static;    
+      z-index: 400;   
+  }
+
+.secondary-menu  {
+  display: none !important;
+}
+
+  .grid__item {
+    display: none !important;
+  }
+
+.section-products .product .mobile_btn {
+  display: block;
+}
+
+.section-products {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  .section-products h4 {
+    font-size: 24px;
+  }
+
+  .section-get .form-wrapper {
+    width: 100%;
+
+  }
+
+figure.height_400 {
+  height: 400px;
+}
+
+.playlist-container {
+  float: none;
+}
+
+.preview-player-dimensions, .main-preview-player, .playlist-container {
+  height: auto !important;
+}
+.video-js.vjs-fluid {
+  height: 300px !important;
+  position: relative !important;
+  width: 100%;
+}
+
+.playlist-container {
+  width: auto !important;
+  overflow: hidden;
+  height: auto !important;
+  ol {
+    width: 100%;
+    overflow: hidden;
+
+    li {
+      height: 220px;
+      border: 10px solid #fff;
+      margin: 0 !important;
+      padding: 15px;
+      width: 50% !important;
+      box-sizing: border-box;
+      float: left;
+    }
+  }
+}
+
+}
+
+@media screen and (max-width: 800px) {
+
+  figure.height_400 {
+    display: block;
+}
+
+  figure  {
+    margin-bottom: 40px;
+    height: auto !important;
+    text-align: center;
+    span {
+      position: static;
+      height: auto;
+    }
+  }
+  figure img {
+    width: auto;
+    max-width: 100%;
+  }
+  .footer-col {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 0 20px !important;
+    padding: 0 20px !important;
+  }
+
+    .page-footer.section {
+      height: auto !important;
+    }
+
+    .page-header {
+      will-change: initial;
+    }
+
+    .playlist-container li img {
+      min-width: 0;
+      min-height: 0;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .mobile-menu_header {
+    padding-top: 35px;
+    padding-bottom: 25px;
+} 
+
+.page-enagic .section-get {
+  margin-bottom: 0;
+}
+
+.video_overlay{
+  display: none !important;
+}
+}
+
+@media screen and (max-width: 700px) {
+  .playlist-container ol li {
+    width: 100% !important;
+    height: 240px !important;
+      border-left: 0;
+      border-right: 0;
+  }
+
+  .section-green p{
+    max-width: none;
+  }
+.section-desc .iso_item {
+  text-align: center;
+  margin: 0 0 30px;
+  width: 50%;
+}
+
+ .playlist-container {
+  margin: 0 !important;
+   li {
+
+   }
+ }
+
+}
+
+@media screen and (max-width: 460px) {
+ .playlist-container li img {
+    min-width: 0;
+    min-height: 0;
+    max-width: 1000px;
+    width:  auto !important;
+    height: 100% !important;
+}
+
+
+.section-buy {
+    height: auto !important;
+}
+
+}
+
+@media screen and (max-width: 1700px) {
+.secondary-menu  {
+    width: 312px;
+    left: -292px;
+    transition: 0.3s ease;
+
+    &.active {
+      left: 0;
+
+      .arrow {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .arrow {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: url(../img/icons/icon-arrow-right-b-128.png) center center no-repeat;
+        background-size: 35px 35px;
+    }
+  }
+}

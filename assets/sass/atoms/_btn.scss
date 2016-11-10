@@ -1,0 +1,141 @@
+/** ============================
+    btn
+    ======================== **/
+.btn{
+    padding: 15px 37px;
+    color: #2e3a26;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 2px solid #4e6142;
+    display: inline-block;
+    border-radius: 0;
+    width: 100%;
+    box-shadow: none;
+    @include respond-min(600px){
+        width: auto;
+        border-width: 1px;
+    }
+
+  &.btn-big {
+    transform: scale(1.4);
+  }
+    &-default{
+        background: #fff;
+        &:hover{
+            background: #fff;
+        }
+        &.hvr-ripple-out{
+            &:before{
+
+            }
+        }
+
+    }
+    &-link{
+        background: #f8f8f8;
+    }
+    &-primary{
+
+    }
+    &-success{
+
+    }
+    &-info{
+
+    }
+    &-warning{
+
+    }
+    &-danger{
+
+    }
+    &-icons{
+        padding: 0;/* 15px 37px 15px 63px */
+        position: relative;
+        i{
+            position: absolute;
+            margin-right: 8px;
+            font-size: 25px;
+            opacity: 0.8;
+            color: #51753a;
+            z-index: 1;
+            top: 13px;/* 50% */
+            left: 20px;
+            transform: translate(0, -50%);
+        }
+    }
+}
+
+
+.my_btn, .my_btn * {
+    transition: all .2s cubic-bezier(1,0.5,0.21,0.06);
+}
+
+.my_btn {
+  position: relative;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  color: #4e6142;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+}
+.my_btn svg {
+  position: absolute;
+  top: 0; left: 0;
+}
+.my_btn svg rect {
+  fill: none;
+  stroke: #4e6142;
+  stroke-width: 2;
+  stroke-dasharray: 422, 0;
+
+  transition: all 600ms ease;
+}
+.my_btn:hover svg rect {
+  stroke-width: 4;/* 5 */
+  stroke-dasharray: 10, 292;/* 310 */
+  stroke-dashoffset: 33;
+}
+
+.my_btn:hover {
+  font-size:14px;
+  letter-spacing:1px;
+  font-weight:bold;
+  color: #4e6142;
+}
+
+.btn_send {
+  width: 175px;
+}
+
+.btn_send:hover svg rect {
+  stroke-dasharray: 10, 331;
+}
+
+.btn_footer {
+  width: 190px;
+  border:       1px solid #2e3a26;
+
+  svg {
+    display: none;
+  }
+
+  &:hover {  line-height: 50px;
+    color: #4e6142;
+    overflow: hidden;
+    font-size: 12px;
+    letter-spacing: normal;
+    font-weight: normal;
+    opacity: .5;
+
+    i {
+      opacity: 0.5;
+    }
+  }
+}
+
+.btn_footer:hover svg rect {
+}

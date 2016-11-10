@@ -1,0 +1,89 @@
+.product-slider{
+    
+    &_item{
+        text-align: center;
+        position: relative;
+        &.slick-current{
+            img{
+                @include respond-to(sm){
+                    transform: scale(1.8);
+                    margin-top: 70px;
+                }                
+            }
+            .product-slider_content{
+                opacity: 1;
+            }
+            .product-slider_inner{      
+                @include respond-to(sm){
+                    z-index: 10;
+                    width: 180%;
+                    height: 150%;
+                    transform: translate(-25%, -90px);
+                }              
+            }
+        }
+    }
+    .slick-track{        
+        @include respond-to(sm){
+            padding-top: 90px;
+        }
+    }
+    &_img{        
+       img{
+        transition: 0.3s ease;
+           @include inline-block();           
+           width: 170px;
+           height: 170px; 
+       } 
+    }
+    &_content{      
+        opacity: 0;
+        overflow: hidden;
+    }
+    &_name{      
+        padding-top: 50px;  
+        color: #51753a;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+        @include respond-to(sm){
+            padding-top: 90px;
+        }
+    }
+    &_description{      
+        color: #2e3a26;      
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 40px;
+    }
+    &_link{
+        a {
+            display: inline-block;
+        }
+        padding-top: 28px;
+        .btn{
+            // width: 100%;           
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 19px;
+            @include respond-to(sm){
+                margin: 0 10px;
+                width: 150px;
+            }
+        }
+    }
+    .slick-arrow{  
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 145px;
+        font-size: 62px;
+        color: $color-grey;
+        &.slick-next{
+            right: -80px;
+        }
+        &.slick-prev{
+            left: -80px;
+        }
+    }
+}

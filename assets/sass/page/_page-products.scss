@@ -1,0 +1,161 @@
+.section-products {
+         padding-top: 150px;
+         padding-left: 100px;
+         padding-right: 100px;
+         // margin-bottom: 200px;
+         @media screen and (max-width: 1440px) {
+         }
+         h4 {
+           margin-bottom: 8px;
+             font-size: 28px;
+             color: #51753a;
+             line-height: 30px;
+             letter-spacing: 1px;
+         }
+
+    p {
+      margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 28px;
+
+    }
+  a {
+       color: #51753a;
+       text-decoration: underline;
+  }
+
+  .product {
+    margin-bottom: 67px;
+    text-align: center;
+
+    .btn {
+      margin: 0 12px 2px;
+    }
+
+    .mobile_btn {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+
+      overflow: hidden;
+    }
+  }
+
+}
+.section-products_big {
+
+  &.full {
+    padding: 150px 10px;
+    figure { 
+      float: none;
+    }
+
+     ul li {
+      margin-bottom: 15px;
+      span:first-child {
+        width: auto;
+        float: none;
+      }
+     }
+
+    h3 {
+      font-size: 30px;
+    }
+  }
+  h3 {
+    margin-bottom: 20px;
+    font-size: 38px;
+    color: #51753a;
+    line-height: 42px;
+    letter-spacing: 1px;
+  }
+  h4 {
+    margin-bottom: 8px;
+    font-size: 28px;
+    color: #51753a;
+    line-height: 30px;
+    padding: 30px 0;
+    letter-spacing: 0px;
+  }
+  font-size: 16px;
+  line-height: 28px;
+  color: #00000c;
+
+  figure {
+    display: block;
+    float: left;
+    height: auto;
+    text-align: center;
+    margin-right: 60px;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 28px;
+
+  }
+
+  img {
+    width: auto;
+
+    &.prod_right {
+      float: right;
+      margin: 0 0 10px 10px;
+    }
+  }
+
+  strong {
+    color: #000;
+  }
+  ul {
+    li {
+      color: #00000c;
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 32px;
+
+      span:first-child {
+        display: block;
+        float: left;
+        width: 250px;
+        font-weight: bold;
+        opacity: 0.5;
+        &+span {
+          overflow: hidden;
+          display: block;
+
+        }
+      }
+    }
+  }
+
+  .info_wrapper {
+    overflow: hidden;
+  }
+}
+
+.content_prod {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    pointer-events: none;
+
+  &content--show {
+    pointer-events: auto;
+  }
+}
+
+.email_delete,
+.verified {
+  display: inline-block;
+position: static !important;
+}
+
+@import "../grid/style1";
+
+body.view-single {
+  overflow: hidden !important;
+}

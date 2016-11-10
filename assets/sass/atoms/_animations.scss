@@ -1,0 +1,101 @@
+/** ============================
+    animations
+    ======================== **/
+//animation: opacity 0.3s forwards ease-out 0s;
+@keyframes opacity { 
+    0% {
+        opacity: 0;   
+    }
+    100% {
+        opacity: 1;    
+    }
+}
+@keyframes opacityInverse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes textBlock {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+@keyframes top {    
+    100% {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
+    }
+}
+@keyframes opacityMenu { 
+    0% {
+        opacity: 0;
+        transform: translate(0, 50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes toTopFromBottom {
+    49% {
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+@keyframes toBottomFromTop {
+    49% {
+        transform: translate(-50%, 100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toLeftFromRight {
+    49% {
+        transform: translate(-100%, -50%);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(100%, -50%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toRightFromLeft {
+    49% {
+        transform: translate(100%, -50%);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-100%, -50%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+
+
+
+ 

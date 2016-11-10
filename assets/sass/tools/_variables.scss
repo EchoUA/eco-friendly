@@ -1,0 +1,66 @@
+// font --------------------------------------------
+$font-Light: 'Oxygen', sans-serif;
+$font-Oxygen: 'Oxygen', sans-serif;
+$font-Eco: 'eco';
+
+$font: $font-Light;
+$font-2: $font-Light;
+
+// color --------------------------------------------
+$color: #000;
+$color-white: #fff; 
+$color-black: #000;
+$color-grey: #aaa;   
+$color-link: #257dbd;
+
+$blue: #001c51;
+$light-blue: #17579F;
+$sky-blue: #4097ee;
+$yellow: #F59D20;
+$green: #009DAC;
+$light-green: #61c1cc;
+$purple: #8071b3;
+$dark-purple: #5a4991;
+$light-purple: #b6add6;
+$text: #6d6d6d;
+$gray: #303030;
+$light-gray: #494949;
+$gray-text: #767676;
+$color-gray-text: #767676;
+$color-border: #E1E1E1;
+$color-mobile-menu-border: #eaebe9;
+$color-mobile-menu: #5d6e52;
+$color-mobile-menu-hover: #f8f8f8;
+
+// color text
+$color-p: $color;
+$color-h: $color; 
+$color-a: $color-link;
+$color-a-hover: $color;
+$color-selection: $color;
+
+// base variables -------------------------------------------
+
+$input-border-width: 1px;
+$base-text-size: 16; 
+$default-colspan: 1;
+
+$grid-gutter-width: 30px;
+$container-width: 1170px;
+$default-total_cols: 12;
+$container-padding: ($grid-gutter-width / 2);
+
+// image_dir ----------------------------------------------
+$image_dir: '../img/'; 
+
+// @media --------------------------------------------------
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+$screen-lg-max: 1365px;
+$screen-xl-min: 1366px;
+$screen-xl-max: 1599px;
+$screen-xxl-min: 1600px;

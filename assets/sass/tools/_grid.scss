@@ -1,0 +1,249 @@
+// Grid -----------------------------------------------------------------------------
+@mixin container ( $width : $container-width ) {
+    max-width: $width;
+    width: 100%;
+    margin: 0 auto;
+    // clear at the end of container
+    @include clearfix;
+}
+@function cols-width($colspan : $default-colspan, $total_cols : $default-total_cols){
+    @return ( $colspan * (100 / $total_cols) ) + 0%;
+}
+
+@mixin cols ( $colspan : $default-colspan, $total_cols : $default-total_cols ) {
+    width: cols-width($colspan, $total_cols);
+    float: left;
+}
+
+@mixin gallery ( $colspan : $default-colspan, $total_cols : $default-total_cols ) {
+    $col-w : cols-width($colspan, $total_cols);
+    $count : $total_cols / $colspan;
+    width: $col-w;
+    float: left;
+    clear: none;
+    margin-right: -100%;
+    &:nth-child(#{$count}n + 1){
+        clear: both;
+        margin-left: 0;
+    }
+    @for $i from 1 through $count {
+        &:nth-child(#{$count}n + #{$i}){
+            margin-left: ($col-w * $i - $col-w) + 0%;
+        }
+    }
+}
+.container {
+    @extend %clearfix;
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+}
+.container-fluid{
+    @extend %clearfix;
+    padding-left: $container-padding;
+    padding-right: $container-padding; 
+}
+.row {
+    @extend %clearfix;
+    margin-left: ($grid-gutter-width / -2);
+    margin-right: ($grid-gutter-width / -2);
+    min-height: 1px;
+}
+[class^="col-"], [class*=" col-"]{
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    @include respond-to(xs){
+        width: 100%;
+    }
+}
+.col-xs-right{
+    float: right;
+}
+
+$sizes: xs, sm, md, lg, xl, xxl; 
+
+@each $sizes in xs, sm, md, lg, xl, xxl {
+    @include respond-to($sizes) {
+        @for $i from 1 through 12 {  
+     
+            .col-#{$sizes}-#{$i} { 
+                @include cols($i); 
+            } 
+        
+            .col-#{$sizes}-offset-#{$i} {
+                margin-left: cols-width($i, 12);
+            }
+        
+            .col-#{$sizes}-push-#{$i}{
+                left: cols-width($i, 12);
+                right: auto;
+            }
+        
+            .col-#{$sizes}-pull-#{$i} {
+                left: auto;
+                right: cols-width($i, 12);
+            }
+    
+            .col-#{$sizes}-right{
+                float: right;
+            }
+        }
+    }   
+}
+
+
+
+//@for $i from 1 through 12 {
+//    // xs ===========================
+//    
+//    .col-xs-#{$i}{
+//        @include cols($i);
+//    }
+//    
+//    .col-offset-#{$i}{
+//        margin-left: cols-width($i, 12);
+//    }
+//    
+//    .col-xs-offset-#{$i}{
+//        margin-left: cols-width($i, 12);
+//    }
+//    
+//    .col-xs-push-#{$i}{
+//        left: cols-width($i, 12);
+//        right: auto;
+//    }
+//    
+//    .col-xs-pull-#{$i}{
+//        left: auto;
+//        right: cols-width($i, 12);
+//    }    
+//}
+// end Grid -----------------------------------------------------------------------------
+
+//@include respond-to(sm){
+//    @for $i from 1 through 12 {
+//        
+//        .col-sm-#{$i}{
+//            @include cols($i);
+//        }
+//        
+//        .col-sm-offset-#{$i}{
+//            margin-left: cols-width($i, 12);
+//        }
+//        
+//        .col-sm-push-#{$i}{
+//            left: cols-width($i, 12);
+//            right: auto;
+//        }
+//        
+//        .col-sm-pull-#{$i}{
+//            left: auto;
+//            right: cols-width($i, 12);
+//        }
+//    }
+//    .col-sm-right{
+//        float: right;
+//    }
+//}
+//@include respond-to(md){
+//    @for $i from 1 through 12 {
+//        
+//        .col-md-#{$i}{
+//            @include cols($i);
+//        }
+//        
+//        .col-md-offset-#{$i}{
+//            margin-left: cols-width($i, 12);
+//        }
+//        
+//        .col-md-push-#{$i}{
+//            left: cols-width($i, 12);
+//            right: auto;
+//        }
+//        
+//        .col-md-pull-#{$i}{
+//            left: auto;
+//            right: cols-width($i, 12);
+//        }  
+//    }
+//    .col-md-right{
+//        float: right;
+//    }
+//}
+//@include respond-to(lg){
+//    @for $i from 1 through 12 {
+//        
+//        .col-lg-#{$i}{
+//            @include cols($i);
+//        }
+//        
+//        .col-lg-offset-#{$i}{
+//            margin-left: cols-width($i, 12);
+//        }
+//        
+//        .col-lg-push-#{$i}{
+//            left: cols-width($i, 12);
+//            right: auto;
+//        }
+//        
+//        .col-lg-pull-#{$i}{
+//            left: auto;
+//            right: cols-width($i, 12);
+//        }
+//    }
+//    .col-lg-right{
+//        float: right;
+//    }
+//}
+//@include respond-to(xl){
+//    @for $i from 1 through 12 {
+//        
+//        .col-xl-#{$i}{
+//            @include cols($i);
+//        }
+//        
+//        .col-xl-offset-#{$i}{
+//            margin-left: cols-width($i, 12);
+//        }
+//        
+//        .col-xl-push-#{$i}{
+//            left: cols-width($i, 12);
+//            right: auto;
+//        }
+//        
+//        .col-xl-pull-#{$i}{
+//            left: auto;
+//            right: cols-width($i, 12);
+//        }        
+//    }
+//    .col-xl-right{
+//        float: right;
+//    }
+//}
+//@include respond-to(xxl){
+//    @for $i from 1 through 12 {
+//        
+//        .col-xxl-#{$i}{
+//            @include cols($i);
+//        }
+//        
+//        .col-xxl-offset-#{$i}{
+//            margin-left: cols-width($i, 12);
+//        }
+//        
+//        .col-xxl-push-#{$i}{
+//            left: cols-width($i, 12);
+//            right: auto;
+//        }
+//        
+//        .col-xxl-pull-#{$i}{
+//            left: auto;
+//            right: cols-width($i, 12);
+//        }
+//    }
+//    .col-xxl-right{
+//        float: right;
+//    }
+//} 

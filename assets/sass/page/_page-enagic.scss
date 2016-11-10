@@ -1,0 +1,77 @@
+/*page Enagic*/
+
+.section-certification {
+	padding-top: 150px;
+	margin-bottom: 200px;
+	@media screen and (max-width: 1440px) {
+		margin-bottom: 100px;
+	}
+}
+
+figure {
+	margin-bottom: 60px;
+	height: 450px;
+	position: relative;
+	&.height_400 {
+		height: 400px;
+	}
+	img {
+		width: 100%;
+		padding: 0 30px;
+	}
+	figcaption {
+		font-size: 16px;
+		line-height: 26px;
+		text-align: center;
+		color: #2e3a26;
+		padding-top: 20px;
+		b {
+			display: block;
+			font-size: 21px;
+			font-weight: 700;
+			line-height: 34px;
+			padding-bottom: 10px;
+		}
+	}
+	span {
+		height: 40px;
+	    width: 100%;
+	    display: block;
+	    margin-top: 15px;
+	    position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	text-align: center;
+    	a {
+    		margin: auto;
+    		&:last-child {
+    			margin-left: 8px;
+    		}
+	    	.my_btn {
+	    		width: 110px;
+			    height: 40px;
+			    line-height: 40px;
+	    	}
+	    	.my_btn:hover svg rect {
+			    stroke-dasharray: 10, 243;
+			    stroke-dashoffset: 53;
+			}
+		}
+	}
+}
+
+.page-enagic {
+	.section-get {
+		margin-bottom: 50px;
+		@media screen and (max-width: 1440px) {
+			margin-bottom: 100px;
+		}
+	}
+	.section-buy {
+	}
+	.page-footer {
+		height: inherit;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+}
